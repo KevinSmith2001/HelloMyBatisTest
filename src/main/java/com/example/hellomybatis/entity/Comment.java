@@ -37,4 +37,13 @@ public class Comment {
     private String content;
     private String author;
     private Integer aid;
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "cid=" + cid +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                ", aid=" + aid +
+                '}';
+    }
 }
