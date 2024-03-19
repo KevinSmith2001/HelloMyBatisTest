@@ -34,9 +34,7 @@ public class Comment {
     }
 
     private Integer cid;
-    private String content;
-    private String author;
-    private Integer aid;
+
     @Override
     public String toString() {
         return "Comment{" +
@@ -46,4 +44,8 @@ public class Comment {
                 ", aid=" + aid +
                 '}';
     }
+
+    private String content;
+    private String author;
+    private Integer aid;
 }
