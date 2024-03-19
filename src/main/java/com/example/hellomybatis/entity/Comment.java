@@ -13,6 +13,16 @@ public class Comment {
         return content;
     }
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "cid=" + cid +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                ", aid=" + aid +
+                '}';
+    }
+
     public void setContent(String content) {
         this.content = content;
     }
@@ -34,16 +44,6 @@ public class Comment {
     }
 
     private Integer cid;
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "cid=" + cid +
-                ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                ", aid=" + aid +
-                '}';
-    }
 
     private String content;
     private String author;
