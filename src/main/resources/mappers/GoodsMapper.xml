@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hellomybatis.mapper.GoodsMapper">
+    <resultMap id="resultMap" type="Goods">
+        <id property="goodsId" column="goods_id"/>
+        <result property="cateId" column="cate_id"/>
+        <result property="goodsName" column="goods_name"/>
+        <result property="goodsDisc" column="goods_disc"/>
+        <result property="goodsPrice" column="goods_price"/>
+        <result property="goodsDiscount" column="goods_discount"/>
+        <result property="goodsStock" column="goods_stock"/>
+        <result property="goodsOrigin" column="goods_origin"/>
+        <result property="goodsMaterial" column="goods_material"/>
+        <result property="goodsPostalfee" column="goods_postalfee"/>
+        <result property="goodsDate" column="goods_date"/>
+        <result property="goodsSales" column="goods_sales"/>
+        <result property="goodsPic" column="goods_pic"/>
+    </resultMap>
+
+    <select id="selectOne" resultMap="resultMap">
+        SELECT goods_id,cate_id,goods_name,goods_price,goods_discount FROM t_goods where goods_origin="杭州"
+    </select>
+
+    <select id="selectTwo" resultMap="resultMap">
+        SELECT goods_id,cate_id,goods_name,goods_disc,goods_date  FROM t_goods where goods_id=#{goodsId}
+    </select>
+
+    <select id="selectThree" resultMap="resultMap">
+        SELECT goods_id,cate_id,goods_name,goods_sales,goods_pic  FROM t_goods where goods_sales=0
+    </select>
+</mapper>

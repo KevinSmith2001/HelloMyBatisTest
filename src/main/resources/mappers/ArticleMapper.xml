@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.hellomybatis.mapper.ArticleMapper">
+    <resultMap id="resultMap" type="Article">
+        <id property="aid" column="aid"/>
+        <result property="title" column="title"/>
+        <result property="titlePic" column="titlepic"/>
+        <result property="content" column="content"/>
+        <result property="video" column="video"/>
+    </resultMap>
+    <select id="selectArticle" resultMap="resultMap">
+        select * FROM article where aid=#{aid}
+    </select>
+    <insert id="addArticle" parameterType="Article">
+        insert into article values (#{aid},#{title},#{content},#{titlePic},#{video})
+    </insert>
+    <update id="update" parameterType="com.example.hellomybatis.entity.Article">
+        update article set title=#{title},content=#{content} where aid=#{aid}
+    </update>
+    <delete id="delete" parameterType="int">
+        delete from article where aid=#{aid}
+    </delete>
+
+</mapper>
