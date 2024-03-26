@@ -1,25 +1,25 @@
 package com.example.hellomybatis.entity;
 
-public class Goods {
-    private Integer goodsId;
+public class Shop {
+    private String goodsId;
     private Integer cateId;
     private String goodsName;
     private String goodsDisc;
-    private float goodsPrice;
-    private float goodsDiscount;
-    private Integer stock;
+    private Integer goodsPrice;
+    private Integer goodsDiscount;
+    private Integer goodsStock;
     private String goodsOrigin;
     private String goodsMaterial;
-    private float goodsPostalfee;
+    private String goodsPostalfee;
     private String goodsDate;
-    private Integer goodsSales;
+    private String goodsSales;
     private String goodsPic;
 
-    public Integer getGoodsId() {
+    public String getGoodsId() {
         return goodsId;
     }
 
-    public void setGoodsId(Integer goodsId) {
+    public void setGoodsId(String goodsId) {
         this.goodsId = goodsId;
     }
 
@@ -47,28 +47,28 @@ public class Goods {
         this.goodsDisc = goodsDisc;
     }
 
-    public float getGoodsPrice() {
+    public Integer getGoodsPrice() {
         return goodsPrice;
     }
 
-    public void setGoodsPrice(float goodsPrice) {
+    public void setGoodsPrice(Integer goodsPrice) {
         this.goodsPrice = goodsPrice;
     }
 
-    public float getGoodsDiscount() {
+    public Integer getGoodsDiscount() {
         return goodsDiscount;
     }
 
-    public void setGoodsDiscount(float goodsDiscount) {
+    public void setGoodsDiscount(Integer goodsDiscount) {
         this.goodsDiscount = goodsDiscount;
     }
 
-    public Integer getStock() {
-        return stock;
+    public Integer getGoodsStock() {
+        return goodsStock;
     }
 
-    public void setStock(Integer stock) {
-        this.stock = stock;
+    public void setGoodsStock(Integer goodsStock) {
+        this.goodsStock = goodsStock;
     }
 
     public String getGoodsOrigin() {
@@ -87,11 +87,11 @@ public class Goods {
         this.goodsMaterial = goodsMaterial;
     }
 
-    public float getGoodsPostalfee() {
+    public String getGoodsPostalfee() {
         return goodsPostalfee;
     }
 
-    public void setGoodsPostalfee(float goodsPostalfee) {
+    public void setGoodsPostalfee(String goodsPostalfee) {
         this.goodsPostalfee = goodsPostalfee;
     }
 
@@ -103,11 +103,11 @@ public class Goods {
         this.goodsDate = goodsDate;
     }
 
-    public Integer getGoodsSales() {
+    public String getGoodsSales() {
         return goodsSales;
     }
 
-    public void setGoodsSales(Integer goodsSales) {
+    public void setGoodsSales(String goodsSales) {
         this.goodsSales = goodsSales;
     }
 
@@ -121,20 +121,20 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods{" +
-                "goodsId=" + goodsId +
-                ", cateId=" + cateId +
+        return "Shop{" +
+                "goodsId='" + goodsId + '\'' +
+                ", cateId='" + cateId + '\'' +
                 ", goodsName='" + goodsName + '\'' +
                 ", goodsDisc='" + goodsDisc + '\'' +
-                ", goodsPrice=" + goodsPrice +
-                ", goodsDiscount=" + goodsDiscount +
-                ", stock=" + stock +
+                ", goodsPrice='" + goodsPrice + '\'' +
+                ", goodsDiscount='" + goodsDiscount + '\'' +
+                ", goodsStock='" + goodsStock + '\'' +
                 ", goodsOrigin='" + goodsOrigin + '\'' +
                 ", goodsMaterial='" + goodsMaterial + '\'' +
-                ", goodsPostalfee=" + goodsPostalfee +
+                ", goodsPostalfee='" + goodsPostalfee + '\'' +
                 ", goodsDate='" + goodsDate + '\'' +
-                ", goodsSales=" + goodsSales +
+                ", goodsSales='" + goodsSales + '\'' +
                 ", goodsPic='" + goodsPic + '\'' +
-                '}'+"\n";
+                '}';
     }
 }
